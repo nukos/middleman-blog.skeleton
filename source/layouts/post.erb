@@ -1,0 +1,17 @@
+<% wrap_layout :layout do %>
+
+<%= yield %>
+
+<h3>最新の記事</h3>
+<ol>
+  <% blog.articles[0...10].each do |article| %>
+    <li>
+      <% link_to article do %>
+        <%= article.title %>
+        <span><%= article.date.strftime('%b %e') %></span>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
+
+<% end %>
