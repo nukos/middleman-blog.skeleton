@@ -12,5 +12,4 @@
 
 # bundler
 /*.lock
-/.bundle
 /vendor
